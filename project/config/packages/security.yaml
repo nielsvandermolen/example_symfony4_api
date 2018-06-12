@@ -1,5 +1,9 @@
 security:
     providers:
+        user_db_provider:
+            entity:
+                class: App\Entity\User
+                property: apiKey
         in_memory:
             memory:
                 users:
@@ -12,6 +16,12 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        api:
+            pattern: ^/api/
+            guard:
+                authenticators:
+                    - App\Security\TokenAuthenticator
+            provider: user_db_provider
         main:
             http_basic: true
             provider: in_memory
