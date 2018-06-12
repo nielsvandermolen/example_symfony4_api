@@ -8,7 +8,31 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *   itemOperations={
+ *      "get"={"method"="GET"},
+ *      "put"={"method"="PUT"},
+ *      "delete"={"method"="DELETE"},
+ *      "countCommentsinArticle"={
+ *        "route_name"="count_articles",
+ *        "swagger_context" = {
+ *          "parameters" = {
+ *            {
+ *              "name" = "id",
+ *              "in" = "path",
+ *              "required" = "true",
+ *              "type" = "string"
+ *            }
+ *          },
+ *          "responses" = {
+ *            "200" = {
+ *              "description" = "The Comment count has been returned in the response"
+ *            }
+ *          }
+ *        }
+ *      }
+ *   }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
 class Article
