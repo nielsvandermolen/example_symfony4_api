@@ -12,7 +12,7 @@ class ArticleController extends Controller
     /**
      * @Route(
      *     name="count_articles",
-     *     path="/article/{id}/count",
+     *     path="api/article/{id}/count",
      *     methods={"GET"},
      *     defaults={
      *       "_controller"="\App\Controller\ArticleController::countCommentsinArticle",
