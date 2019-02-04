@@ -7,10 +7,10 @@
         "ext-iconv": "*",
         "api-platform/api-pack": "^1.1",
         "easycorp/easyadmin-bundle": "^1.17",
+        "sensio/framework-extra-bundle": "^5.2",
         "symfony/console": "^4.1",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.1",
-        "symfony/lts": "^4@dev",
         "symfony/security-bundle": "^4.1",
         "symfony/yaml": "^4.1"
     },
