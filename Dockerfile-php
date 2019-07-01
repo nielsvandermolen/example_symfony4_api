@@ -1,6 +1,7 @@
 FROM php:fpm
 RUN apt-get update && apt-get install -y --no-install-recommends \
         git \
+        libzip-dev \
         zlib1g-dev \
         libxml2-dev \
     && docker-php-ext-install \
