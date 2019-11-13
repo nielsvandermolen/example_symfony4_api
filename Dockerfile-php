@@ -9,4 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         zip
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 COPY . /var/www/project
+COPY build/php/php.ini /usr/local/etc/php/
 WORKDIR /var/www/project/
